@@ -18,7 +18,13 @@ public class ActorService {
         this.actorRepository = actorRepository;
     }
 
+    /**
+     * Get all actors
+     *
+     * @return the list of actors
+     */
     public List<Actor> getActors() {
+        log.info("find all actors");
         return actorRepository.findAll();
     }
 }

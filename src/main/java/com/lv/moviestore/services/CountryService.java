@@ -18,7 +18,13 @@ public class CountryService {
         this.countryRepository = countryRepository;
     }
 
+    /**
+     * Get all countries
+     *
+     * @return the list of countries
+     */
     public List<Country> getCountries() {
+        log.info("find all countries");
         return countryRepository.findAll();
     }
 }

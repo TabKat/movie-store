@@ -18,7 +18,13 @@ public class CityService {
         this.cityRepository = cityRepository;
     }
 
+    /**
+     * Get all cities
+     *
+     * @return the list of cities
+     */
     public List<City> getCities() {
+        log.info("find all cities");
         return cityRepository.findAll();
     }
 }
