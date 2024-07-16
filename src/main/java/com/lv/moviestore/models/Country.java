@@ -1,5 +1,6 @@
 package com.lv.moviestore.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -25,6 +26,7 @@ public class Country {
     @Size(min = 2, max = 50, message = "country name must be more that 2 symbols and not more then 50")
     String countryName;
 
+    @JsonIgnore
     @Column(name = "last_update", nullable = false)
     Timestamp lastUpdate;
 }

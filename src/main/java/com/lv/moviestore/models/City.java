@@ -1,5 +1,6 @@
 package com.lv.moviestore.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -27,6 +28,7 @@ public class City {
     @JoinColumn(name = "country_id", referencedColumnName = "country_id")
     Country country;
 
+    @JsonIgnore
     @Column(name = "last_update", nullable = false)
     Timestamp lastUpdate;
 }

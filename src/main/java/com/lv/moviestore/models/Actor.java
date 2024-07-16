@@ -1,5 +1,6 @@
 package com.lv.moviestore.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -28,6 +29,7 @@ public class Actor {
     @Size(min = 2, max = 45, message = "last name must be more that 2 symbols and not more then 45")
     String lastName;
 
+    @JsonIgnore
     @Column(name = "last_update", nullable = false)
     Timestamp lastUpdate;
 }
