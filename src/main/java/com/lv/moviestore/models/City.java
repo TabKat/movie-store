@@ -20,7 +20,7 @@ public class City {
 
     @Column(name = "city", nullable = false)
     @NotBlank(message = "city name must not be blank")
-    @Size(min = 2, max = 100, message = "city name must be more that 2 symbols and not more then 100")
+    @Size(min = 2, max = 50, message = "city name must be more that 2 symbols and not more then 50")
     String cityName;
 
     @OneToOne(cascade = CascadeType.ALL)

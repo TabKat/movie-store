@@ -22,7 +22,7 @@ public class Country {
 
     @Column(name = "country", nullable = false)
     @NotBlank(message = "country name must not be blank")
-    @Size(min = 2, max = 40, message = "country name must be more that 2 symbols and not more then 40")
+    @Size(min = 2, max = 50, message = "country name must be more that 2 symbols and not more then 50")
     String countryName;
 
     @Column(name = "last_update", nullable = false)
