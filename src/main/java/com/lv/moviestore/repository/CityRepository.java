@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface CityRepository extends JpaRepository<City, Long> {
     @Query("select c from City c where c.country.countryId = :id")
-    List<City> findCityByCountryId(@Param("id") Integer id);
+    List<City> findCitiesByCountryId(@Param("id") Integer id);
 }
