@@ -31,7 +31,7 @@ public class CityService {
     /**
      * Get all cities by country id
      *
-     * @param id Long
+     * @param id Integer
      * @return the list of cities
      */
     public List<City> getCitiesByCountryId(Integer id) {
