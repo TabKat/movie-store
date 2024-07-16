@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -32,6 +33,7 @@ public class Actor {
     String lastName;
 
     @JsonIgnore
-    @Column(name = "last_update", nullable = false)
+    @UpdateTimestamp
+    @Column(name = "last_update")
     Timestamp lastUpdate;
 }

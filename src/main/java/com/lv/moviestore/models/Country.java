@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -29,6 +30,7 @@ public class Country {
     String countryName;
 
     @JsonIgnore
-    @Column(name = "last_update", nullable = false)
+    @UpdateTimestamp
+    @Column(name = "last_update")
     Timestamp lastUpdate;
 }
