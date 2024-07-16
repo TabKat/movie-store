@@ -35,7 +35,7 @@ public class CityService {
      * @return the list of cities
      */
     public List<City> getCitiesByCountryId(Integer id) {
-        log.info("find all cities where country id is {}", id);
+        log.info("find all cities where country id is [{}]", id);
         return cityRepository.findCitiesByCountryId(id);
     }
 }
