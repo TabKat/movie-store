@@ -1,6 +1,7 @@
 package com.lv.moviestore.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -19,6 +20,7 @@ import java.sql.Timestamp;
 public class Country {
     @Id
     @Column(name = "country_id", nullable = false)
+    @JsonProperty(value = "id", index = 0)
     Integer countryId;
 
     @Column(name = "country", nullable = false)

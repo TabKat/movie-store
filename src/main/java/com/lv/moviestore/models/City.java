@@ -1,6 +1,7 @@
 package com.lv.moviestore.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -17,6 +18,7 @@ import java.sql.Timestamp;
 public class City {
     @Id
     @Column(name = "city_id", nullable = false)
+    @JsonProperty(value = "id", index = 0)
     Integer cityId;
 
     @Column(name = "city", nullable = false)
