@@ -25,7 +25,7 @@ public class City {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "country_id", referencedColumnName = "country_id")
-    Country countryId;
+    Country country;
 
     @Column(name = "last_update", nullable = false)
     Timestamp lastUpdate;
