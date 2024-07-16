@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,5 +27,10 @@ public class CityController {
     @GetMapping
     List<City> getCities() {
         return cityService.getCities();
+    }
+
+    @GetMapping("/{id}")
+    List<City> getCitiesByCountryId(@PathVariable("id") Integer id) {
+        return cityService.getCitiesByCountryId(id);
     }
 }

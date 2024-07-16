@@ -27,4 +27,15 @@ public class CityService {
         log.info("find all cities");
         return cityRepository.findAll();
     }
+
+    /**
+     * Get all cities by country id
+     *
+     * @param id Long
+     * @return the list of cities
+     */
+    public List<City> getCitiesByCountryId(Integer id) {
+        log.info("find all cities where country id is {}", id);
+        return cityRepository.findCityByCountryId(id);
+    }
 }
