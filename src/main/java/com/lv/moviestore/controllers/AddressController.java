@@ -14,7 +14,7 @@ import java.util.List;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("/api/v1/address")
+@RequestMapping("/api/v1/addresses")
 public class AddressController {
     AddressService addressService;
 
