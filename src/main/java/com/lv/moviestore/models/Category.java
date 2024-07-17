@@ -18,20 +18,19 @@ import java.sql.Timestamp;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Country {
+public class Category {
     @Id
-    @Column(name = "country_id", nullable = false)
+    @Column(name = "category_id", nullable = false)
     @JsonProperty(value = "id", index = 0)
-    Integer countryId;
+    Integer categoryId;
 
-    @Column(name = "country", nullable = false)
-    @NotBlank(message = "country name must not be blank")
-    @Size(min = 2, max = 50, message = "country name must be more that 2 symbols and not more then 50")
-    String countryName;
+    @Column(name = "name", nullable = false)
+    @NotBlank(message = "name name must not be blank")
+    @Size(min = 2, max = 25, message = "name name must be more that 2 symbols and not more then 25")
+    String name;
 
     @JsonIgnore
     @UpdateTimestamp
     @Column(name = "last_update")
     Timestamp lastUpdate;
 }
-
