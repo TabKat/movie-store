@@ -18,6 +18,11 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
+    /**
+     * Get all addresses
+     *
+     * @return the list of addresses
+     */
     public List<Address> getAddresses() {
         log.info("find all addresses");
         return addressRepository.findAll();
